@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    {% load staticfiles %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Thomas Binu</title>
+    <link href="{% static 'resume/stylesheets/main.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+
+<style>
+
+
+</style>
+
+<body>
+
+<div id="header_wrapper">
+
+
+    <div class="header">
+
+        {% with summary=app_data.summary %}
+
+
+        <!-- Top Summary -->
+        <div id="top_logo">
+            <h1>{{ summary.name }}</h1>
+        </div>
+
+        <div id="top_download">
+            <a href="{{ summary.cv_url }}" target="_blank">Download my resume</a>
+        </div>
+
+        <div class="about_one_half_first">
+
+            <img src="/images/photo.png" class="about_me_img" alt="me"/>
+            <h4>{{ summary.career }}</h4>
+
+            <p>{{ summary.description }}</p>
+        </div>
+
+        <div class="about_one_half">
+
+            <div class="contact_details">
+
+                <div class="contact_info contact_me_phone">
+                    {{ summary.phone }}
+
+                </div>
+
+            </div>
+
+            <div class="contact_details">
+
+                <div class="contact_info contact_me_email">
+                    <a href="mailto:{{ summary.email }}">{{ summary.email }}</a>
+
+
+                </div>
+
+            </div>
+
+            <div class="contact_details">
+
+
+                <div class="contact_info contact_me_location">
+                    {{ summary.location }}
+
+                </div>
+            </div>
+
+            <div class="contact_details">
+
+
+                <div class="contact_info contact_me_linkedIn">
+                    <a href="{{ summary.linkedin.url }}">{{ summary.linkedin.name }}</a>
+
+
+                </div>
+            </div>
+            {% endwith %}
+        </div>
+    </div>
+
+
+    <div class="clear"></div>
+
+</div>
+
+
+<!-- Detailed Content -->
+
+<div class="wrapper">
+
+    <div class="full_width">
+
+        <!-- Professional Skills -->
+
+
+        <h6><span class="styled_heading">Professional Skills</span></h6>
+
+        <div class="one_half_first">
+
+            <!-- Skill Bar -->
+
+
+            <div class="content_with_padding">
+
+                {% with skills=app_data.professional_skills.skill_bar %}
+                <ul id="skill">
+                    {% for skill in skills %}
+
+                    <li><span style="width:{{ skill.value }};background: #627076;"></span><em>{{ skill.name }}</em></li>
+
+                    {% endfor %}
+
+                </ul>
+                {% endwith %}
+            </div>
+
+
+        </div>
+
+        <!-- Skill Table -->
+
+
+        <div class="one_half">
+            <div class="content_with_padding table_content">
+
+                <table style="border-spacing: 0 1em">
+
+                    {% with skill_tables=app_data.professional_skills.skill_table %}
+
+                    {% for skill_table in skill_tables %}
+                    <tr>
+                        <td style='width:40%'>
+                            {{ skill_table.name }}
+                        </td>
+                        <td>
+                            {{ skill_table.value }}
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+                    {% endwith %}
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="full_width">
+
+
+        <div class="one_half_first">
+
+            <!-- Work Experience -->
+
+            <h6><span class="styled_heading">Work Experience</span></h6>
+
+            {% with work_exp=app_data.work_experience %}
+
+            <ul class="content_with_padding">
+
+                <li><span class="small_heading"><a href="{{ work_exp.url }}" target="_blank">{{ work_exp.company }}</a></span>
+
+                    <div class="lgt_block">
+                        {{ work_exp.duration }}
+
+                    </div>
+
+
+                    <div class="drk_block">
+                        {{ work_exp.position }}
+
+                    </div>
+
+                    <div class="content_with_padding">
+
+                        <ul class="square">
+
+                            {% for desc in work_exp.description %}
+
+                            <li>{{ desc }}</li>
+
+                            {% endfor %}
+
+                        </ul>
+                        {% endwith %}
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="one_half">
+
+            <!-- Education -->
+
+            <h6><span class="styled_heading">Education</span></h6>
+
+            <div class="content_with_padding">
+
+                {% with education=app_data.education %}
+
+                <span class="small_heading"><a href="{{ education.url }}" target="_blank">{{ education.school }}</a> </span>
+
+
+                <div class="lgt_block">
+                    {{ education.duration }}
+
+                </div>
+
+                <div class="drk_block">
+                    {{ education.degree }}
+
+                </div>
+
+                <div class="content_with_padding">
+                    <p>
+                        GPA on a scale of 10 (GPA converted to a scale of 4)<br/>
+                        <span class="small_heading">Majors</span> : {{ education.cgpa.majors }}<br/>
+                        <span class="small_heading">Overall</span> :  {{ education.cgpa.overall }}<br/><br/>
+
+                        {% for document in education.documents %}
+
+                        {% with 'resume/'|add:document.url as document_static %}
+
+                        <a target='_blank' href="{% static document_static %}">{{ document.name }}</a><br/>
+
+                        {% endwith %}
+
+                        {% endfor %}
+
+                    </p>
+
+                    <span class="small_heading">ACTIVITIES AND SOCIETIES</span>
+
+                    <ul class="square content_with_padding">
+
+                        {% for activity in education.activities%}
+                        <li>{{ activity }}</li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                    {% endwith %}
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="full_width">
+
+        <!-- Publications -->
+
+        <div class="one_half_first">
+
+
+            <h6><span class="styled_heading">Publications</span></h6>
+
+
+            <div class="content_with_padding">
+
+                {% with publications=app_data.publications %}
+
+                <span class="small_heading">{{ publications.name }}</span>
+
+                <div class="content_with_padding">
+                    <p>{{ publications.description }}</p>
+
+
+                    <div class="table_content">
+                        <table style="border-spacing: 0 0.7em">
+                            {% for detail in publications.detail %}
+
+                            <tr>
+                                <td style='width:30%'>{{ detail.name }}</td>
+                                <td>{{ detail.value }}</td>
+                            </tr>
+
+                            {% endfor %}
+                        </table>
+                    </div>
+
+
+                    <p style="margin-top:2em"><a target='_blank'
+                                                 href="{{ publications.documents.paper }}">Paper</a><br/>
+                        <a target='_blank'
+                           href="{{ publications.documents.publications_page }}">Publication
+                            page</a><br/>
+                        <a target='_blank' href="{{ publications.documents.certificate }}">Certificate</a><br/>
+
+                    </p>
+
+                </div>
+
+                {% endwith %}
+            </div>
+
+
+        </div>
+
+
+        <div class="one_half">
+
+            <!-- Achievements -->
+
+            <h6><span class="styled_heading">Achievements</span></h6>
+
+            <div class="content_with_padding">
+
+                <div class="small_heading">PROFESSIONAL</div>
+
+                <ul class="square content_with_padding">
+
+                    {% with professionals=app_data.achievements.professional %}
+                    {% for professional in professionals %}
+
+                    <li><a target='_blank' href="{{ professional.url }}">{{ professional.name }}</a>
+                    </li>
+                    {% endfor %}
+                    {% endwith %}
+
+                </ul>
+                <div class="small_heading">ACADEMIC</div>
+
+                <ul class="square content_with_padding">
+
+                    {% with academics=app_data.achievements.academic %}
+                    {% for academic in academics %}
+
+
+                      {% with 'resume/'|add:academic.url as academic_doc_static %}
+
+                    <li><a target='_blank' href="{% static academic_doc_static %}">{{ academic.name }}</a>
+                    </li>
+
+                    {% endwith %}
+                    {% endfor %}
+                    {% endwith %}
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Portfolio  -->
+    <div class="full_width">
+
+        <h6><span class="styled_heading">Portfolio</span></h6>
+
+
+        <div class="portfolio_table">
+
+            {% with apps=app_data.portfolio_apps %}
+            {% for app in apps %}
+
+            <div class="portfolio_cell">
+
+                <img src="{% static 'resume/images/portfolio_apps/' %}{{ app.icon }}"/>
+                <span>
+                    {{ app.name }}
+                </span>
+
+                <p> {{ app.description }}</p>
+
+                {% if app.play_store != "soon" %}
+
+                <a href="{{ app.play_store }}"><img></a>
+                {% else %}
+                <div>COMING SOON!</div>
+                {% endif %}
+            </div>
+
+            {% endfor %}
+            {% endwith %}
+
+        </div>
+
+
+    </div>
+
+    <div class="spacing"></div>
+
+
+    <div id="footer">
+        <div id="powered_by">Powered by</div>
+        <img src="{% static 'resume/images/html_5.png' %}"/>
+        <img src="{% static 'resume/images/node_js.png' %}"/>
+        <!--<img src="/images/ejs.png"/>-->
+
+    </div>
+
+
+
+    <div id="copyright">{{ appdata.copyright }}</div>
+
+
+</div>
+
+
+</body>
+</html>

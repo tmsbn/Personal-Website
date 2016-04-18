@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "name": "Thomas Binu",
+    "career": "Mobile Developer",
+    "description": "Lead mobile developer with 3+ years of experience specializing in GIS mapping applications. Strong programming skills and a firm grasp on UX design principles, with a proven track record of successfully delivering 7+ android projects for government entities in the middle east.",
+    "phone": "+971 50 2540378",
+    "email": "mailthomasb@gmail.com",
+    "location": "Dubai, UAE",
+    "linkedin": {
+      "name": "LinkedIn Profile",
+      "url": "https://www.linkedin.com/pub/thomas-binu/55/6b0/562"
+    },
+    "cv_url": "/documents/Thomas Binu CV Dec 2015.pdf"
+  },
+  "professional_skills": {
+    "skill_bar": [
+      {
+        "name": "ANDROID",
+        "value": "90%"
+      },
+      {
+        "name": "IOS",
+        "value": "40%"
+      },
+      {
+        "name": "NODE JS",
+        "value": "60%"
+      },
+      {
+        "name": "PHOTOSHOP",
+        "value": "70%"
+      },
+      {
+        "name": "UNITY 3D",
+        "value": "40%"
+      },
+      {
+        "name": "PHP",
+        "value": "40%"
+      }
+    ],
+    "skill_table": [
+      {
+        "name": "Languages",
+        "value": "Most experienced with Java and Javascript Some experience with C++, Objective C, PHP\nFamiliar with Python, Swift, C#"
+      },
+      {
+        "name": "Frameworks",
+        "value": "Android Development Tools, Esri ArcGIS platform, Nokia HERE Platform, Node.js, Gradle Build System, JQuery Mobile"
+      },
+      {
+        "name": "Programming Concepts",
+        "value": "Model-View-Controller, Object-Relational-Mapping, RESTful Programming, Thread Scheduling, Dependency Injection"
+      },
+      {
+        "name": "Operating Systems",
+        "value": "Mac OS X, Windows"
+      },
+      {
+        "name": "Code Version Control",
+        "value": "Git, GitHub, Bitbucket"
+      },
+      {
+        "name": "Applications",
+        "value": "Android Studio, WebStorm, Eclipse, Visual Studio, XCode, Adobe Photoshop, MATLAB, AutoCAD"
+      }
+    ]
+  },
+  "work_experience": {
+    "company": "GISTEC, SHARJAH",
+    "position": "Lead Android Developer",
+    "url":"http://www.gistec.com/",
+    "duration": "AUG 2012 - PRESENT",
+    "description": [
+      "Engage in end-to-end android development entailing concept, design, build, deploy, test, release to Play Store and support services.",
+      "Specialist in development of map driven applications using Esri ArcGIS Platform & Nokia Here Platform.",
+      "Collaborating with the client, senior management and functional managers to plan, execute and deliver projects.",
+      "Conducting workshops in Android Development and Mobile Mapping Technologies.",
+      "Delegating projects tasks and supervising team members to ensure timely completion and delivery of project.",
+      "Training and mentoring interns on various areas and assigning them tasks and duties based on their suitability to the project."
+    ]
+  },
+  "education": {
+    "school": "BITS PILANI, DUBAI CAMPUS",
+    "duration": "AUG 2008 - JULY 2012",
+    "degree": "B.E. (Hons) Computer Science",
+    "url":"http://universe.bits-pilani.ac.in/dubai/",
+    "cgpa": {
+      "majors": "8.57 (3.43)",
+      "overall": "7.81 (3.12)"
+    },
+    "documents": [
+      {
+        "name": "Transcripts",
+        "url": "documents/transcripts.pdf"
+      },
+      {
+        "name": "Degree Certificate",
+        "url": "documents/college_degree.pdf"
+      }
+    ],
+    "activities": [
+      "College Programming Team",
+      "College Chess Team Captain"
+    ]
+  },
+  "publications": {
+    "name": "WEB APPLICATION FOR UNIVERSITY INTERNSHIP PROGRAM MANAGEMENT",
+    "description": "Software designed to manage the different aspects of an internship program in a university. It includes a faculty portal to evaluate the students’ academic progress throughout the semester, review project reports and generate internship transcript, and a student portal to submit company preferences and track academic progress. An administration portal is also available to control the end-to-end working of the software and oversee the entire process.",
+    "details": [
+      {
+        "name": "Publisher",
+        "value": "World Academy of Science, Engineering and Technology"
+      },
+      {
+        "name": "Journal",
+        "value": "International Journal of Computer, Information Science and Engineering"
+      },
+      {
+        "name": "Year",
+        "value": "2013"
+      }
+    ],
+    "documents": {
+      "paper": "http://waset.org/publications/17263/web-application-for-university-internship-program-management",
+      "publications_page": "http://waset.org/Publications/web-application-for-university-internship-program-management/17263",
+      "certificate": "/documents/WASET.pdf"
+    }
+  },
+  "achievements": {
+    "academic": [
+      {
+        "name": "Placed 2nd in University Obfuscation Contest (2012)",
+        "url": "documents/college_debugging_competition.pdf"
+      },
+      {
+        "name": "Placed 2nd in Inter-University Chess Championship (2012)",
+        "url": "documents/chess_inter_college_canada.pdf"
+      },
+      {
+        "name": "Placed 1st in Inter-University Chess Championship (2012)",
+        "url": "documents/chess_inter_college.pdf"
+      },
+      {
+        "name": "Placed 2nd in Gulf Programming Contest (2011)",
+        "url": "documents/gpc_certificate.pdf"
+      },
+      {
+        "name": "Placed 1st in Inter-Class Chess Championship (2011)",
+        "url": "documents/chess_inter_class.pdf"
+      },
+      {
+        "name": "Placed 2nd in Inter-School Programming Competition (2008)",
+        "url": "documents/school_programming_contest.pdf"
+      }
+    ]
+  },
+  "portfolio_apps": [
+    {
+      "name": "DARB",
+      "icon": "darb.png",
+      "description": "Map Application for the residents of Abudhabi",
+      "play_store": "https://play.google.com/store/apps/details?id=com.dot.darbmobile"
+    },
+    {
+      "name": "GISWORX",
+      "icon": "gisworx.png",
+      "description": "Map Application for the residents of Abudhabi",
+      "play_store": "https://play.google.com/store/apps/details?id=com.gistec.gistecandroid"
+    },
+     {
+      "name": "ABUDHABI TAXI",
+      "icon": "abudhabi_taxi.png",
+      "description": "Book a taxi for abudhabi residents",
+      "play_store": "https://play.google.com/store/apps/details?id=transad.abudhabi.taxi"
+    },
+    {
+      "name": "GISWORX CITY",
+      "icon": "gisworx_city.png",
+      "description": "Catch up the latest in the GIS community",
+      "play_store": "https://play.google.com/store/apps/details?id=com.gistec.gisworxcity"
+    },
+    {
+      "name": "NCSI",
+      "icon": "ncsi.png",
+      "description": "Socio-economic statistical information for Oman",
+      "play_store": "https://play.google.com/store/apps/details?id=com.gistec.geocortexviewer"
+    },
+    {
+      "name": "ACTVET",
+      "icon": "actvet.png",
+      "description": "Locate training centers in UAE",
+      "play_store": "https://play.google.com/store/apps/details?id=ae.ac.actvet"
+    }
+  ],
+  "copyright": "© 2015 Thomas Binu All Rights Reserved.",
+  "powered_by": "Powered by Node.js"
+}
