@@ -257,7 +257,7 @@ div .first {
 }
 
 .portfolio_cell a img {
-    content: url("/images/play_store.jpg");
+
     width: 30%;
     margin-top: -5%;
     height: auto;
@@ -431,7 +431,6 @@ ul.square li p {
     margin-top: -5px;
 
     padding: 7px 10px 5px 28px;
-    background: url("../img/calendar.png") no-repeat scroll 5px 7px #E4E7EB;
 }
 
 .drk_block {
