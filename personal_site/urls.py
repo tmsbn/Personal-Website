@@ -20,4 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'sampledata/', include('sampledata.urls')),
     url(r'^', include('resume.urls'))
+
 ]
+
